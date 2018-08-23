@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20180823215920_add_active_column_to_users.rb
