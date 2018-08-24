@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FeatureApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<% unless flash.empty? %>
+  <div class="row flash_msg">
+    <% flash.each do |name, message| %>
+      <div class="text-center alert <%=flash[:notice]%>">
+        <i class="<%=flash[:notice]%>"></i>
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+</body>
+</html>
